@@ -11,10 +11,14 @@ An extension to add **Swagger**, **OpenApi**, **Scalar**, **CustomUrl** and **Cu
 You can have **ApiDocs** and also your custom **links** in your **.Net Aspire Dashboard** like this :
 ![AspireDashboard](https://github.com/user-attachments/assets/ab975e4e-9f42-4b93-a983-c359a2bb500c)
 
-## 📦 How To
-Simply add this **nuget package**  
-```Arshid.Aspire.ApiDocs.Extensions```
+## Getting Started
+### Installation
+Simply install this **nuget package**  [Arshid.Aspire.ApiDocs.Extensions](https://www.nuget.org/packages/Arshid.Aspire.ApiDocs.Extensions) to your **AppHost.csproj**  
   
+```
+dotnet add package Arshid.Aspire.ApiDocs.Extensions
+```
+
 ![Nuget Package](https://github.com/user-attachments/assets/824ede4b-2afd-46ae-b8cb-b24e0dacff92)
 
 Then add these lines for the project that has Swagger, Scalar or etc.
