@@ -6,7 +6,7 @@
 
 <h1 align="center">Arshid Aspire ApiDocs Extensions</h1>
 
-An extension to add **Swagger**, **OpenApi**, **Scalar**, **CustomUrl** and **CustomRoute** to **.Net Aspire** dashboard for API, Blazor and any other app.
+An extension to add **Swagger**, **OpenApi**, **Scalar**, **CustomUrl** and **CustomRoute** to **.Net Aspire** dashboard for **API**, **Blazor** and any other app.
 
 You can have **ApiDocs** and also your custom **links** in your **.Net Aspire Dashboard** like this :
 ![AspireDashboard](https://github.com/user-attachments/assets/ab975e4e-9f42-4b93-a983-c359a2bb500c)
