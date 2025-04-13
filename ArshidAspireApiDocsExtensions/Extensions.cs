@@ -8,9 +8,11 @@ public static class Extensions
             name: CustomRoute,
             displayName: CustomRoute,
             executeCommand: context => OnLinkOpenerCommandAsync(builder, context, CustomRoute),
-            iconName: "Accessibility",
-            iconVariant: IconVariant.Filled);
-
+            commandOptions: new CommandOptions
+            {
+                IconName = "Accessibility",
+                IconVariant = IconVariant.Filled
+            });
         return builder;
     }
 
@@ -21,9 +23,11 @@ public static class Extensions
             name: "CustomUrl",
             displayName: CustomUrl,
             executeCommand: context => OnLinkOpenerCommandAsync(builder, context, CustomUrl: CustomUrl),
-            iconName: "Accessibility",
-            iconVariant: IconVariant.Filled);
-
+            commandOptions: new CommandOptions
+            {
+                IconName = "Accessibility",
+                IconVariant = IconVariant.Filled
+            });
         return builder;
     }
 
@@ -34,9 +38,11 @@ public static class Extensions
             name: "OpenApi",
             displayName: "OpenApi",
             executeCommand: context => OnLinkOpenerCommandAsync(builder, context, "/OpenApi/v1.json"),
-            iconName: "Accessibility",
-            iconVariant: IconVariant.Filled);
-
+            commandOptions: new CommandOptions
+            {
+                IconName = "Accessibility",
+                IconVariant = IconVariant.Filled
+            });
         return builder;
     }
 
@@ -47,9 +53,11 @@ public static class Extensions
             name: "Scalar",
             displayName: "Scalar",
             executeCommand: context => OnLinkOpenerCommandAsync(builder, context, "/Scalar/v1"),
-            iconName: "Accessibility",
-            iconVariant: IconVariant.Filled);
-
+            commandOptions: new CommandOptions
+            {
+                IconName = "Accessibility",
+                IconVariant = IconVariant.Filled
+            });
         return builder;
     }
 
@@ -60,21 +68,23 @@ public static class Extensions
             name: "Swagger",
             displayName: "Swagger",
             executeCommand: context => OnLinkOpenerCommandAsync(builder, context, "/Swagger/index.html"),
-            iconName: "Accessibility",
-            iconVariant: IconVariant.Filled);
-
+            commandOptions: new CommandOptions
+            {
+                IconName = "Accessibility",
+                IconVariant = IconVariant.Filled
+            });
         return builder;
     }
 
-    private static async Task<ExecuteCommandResult> OnLinkOpenerCommandAsync(
+    private static Task<ExecuteCommandResult> OnLinkOpenerCommandAsync(
         IResourceBuilder<ProjectResource> builder,
         ExecuteCommandContext context,
-        string Route = null,
-        string CustomUrl = null,
+        string? Route = null,
+        string? CustomUrl = null,
         bool IsHttps = false
         )
     {
-        var url = string.Empty;
+        string? url;
         if (!string.IsNullOrEmpty(CustomUrl))
             url = CustomUrl;
         else
@@ -85,6 +95,6 @@ public static class Extensions
             Verb = "open"
         };
         System.Diagnostics.Process.Start(ps);
-        return CommandResults.Success();
+        return Task.FromResult(CommandResults.Success());
     }
 }
