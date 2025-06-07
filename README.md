@@ -4,11 +4,18 @@
   </a>
 </p>
 
-<h1 align="center">Arshid Aspire ApiDocs Extensions</h1>
+<h1 align="center">Arshid Aspire ApiDocs Extensions
+
+[![Arshid.Aspire.ApiDocs.Extensions](https://img.shields.io/nuget/v/Arshid.Aspire.ApiDocs.Extensions.svg?color=red&style=flat-square)](https://www.nuget.org/packages/Arshid.Aspire.ApiDocs.Extensions/)
+[![Arshid.Aspire.ApiDocs.Extensions](https://img.shields.io/nuget/dt/Arshid.Aspire.ApiDocs.Extensions.svg?style=flat-square)](https://www.nuget.org/packages/Arshid.Aspire.ApiDocs.Extensions/)
+[![Arshid.Aspire.ApiDocs.Extensions](https://img.shields.io/badge/License-MIT-blue?style=flat-square)]([https://github.com/zandiarash/Arshid-Aspire-ApiDocs-Extensions](https://github.com/zandiarash/Arshid-Aspire-ApiDocs-Extensions/)/blob/master/LICENSE)
+
+</h1>
+</div>
 
 An extension to add **Swagger**, **OpenApi**, **Scalar**, **CustomUrl** and **CustomRoute** to **.Net Aspire** dashboard for **API**, **Blazor** and any other app.
-
 You can have **ApiDocs** and also your custom **links** in your **.Net Aspire Dashboard** like this :
+
 ![AspireDashboard](https://github.com/user-attachments/assets/ab975e4e-9f42-4b93-a983-c359a2bb500c)
 
 ## Getting Started
