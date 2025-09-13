@@ -44,6 +44,23 @@ var apiService = builder.AddProject<Projects.AspireApp1_ApiService>("apiservice"
   
 ![Usage](https://github.com/user-attachments/assets/b289704b-3bb0-4cc2-ba4f-ccaafe5732f3)
 
+<div align="center">
+
+## NuGet Package Statistics
+
+| Metric | Value |
+|---|---|
+| **Package** | `Arshid.Aspire.ApiDocs.Extensions` |
+| **Latest version** | 9.4.2.1 |
+| **Total downloads** | ~2,100 |
+| **Average daily downloads** | ~10 |
+| **More stats** | [NuGet page](https://www.nuget.org/packages/Arshid.Aspire.ApiDocs.Extensions/) |
+
+<img width="898" height="344" alt="image" src="https://github.com/user-attachments/assets/5979fe86-2349-4290-ba4c-2490787d661c" />
+
+</div>
+
+
 ### If you are not familiar with Swagger, Scalar, OpenApi and similar tools please read from this article :
 [net-9-revolutionizing-documentation-of-apis-from-swashbuckle-to-scalar](https://dev.to/arashzandi/net-9-revolutionizing-documentation-of-apis-from-swashbuckle-to-scalar-527)
 
