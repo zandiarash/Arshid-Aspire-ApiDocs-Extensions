@@ -5,10 +5,11 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<PackageId>Arshid.Aspire.ApiDocs.Extensions</PackageId>
-		<Version>9.4.0.1</Version>
+		<Version>9.4.2.1</Version>
 		<Authors>Arash Zandi</Authors>
 		<Company>Arshid</Company>
-		<Description>An extension to add Swagger, OpenApi, Scalar, CustomUrl and CustomRoute to .Net Aspire.</Description>
+		<Description>An extension to add Swagger, OpenApi, Scalar, CustomUrl and CustomRoute to .Net
+			Aspire.</Description>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageProjectUrl>https://github.com/ZandiArash/Arshid-Aspire-ApiDocs-Extensions</PackageProjectUrl>
 		<RepositoryUrl>https://github.com/ZandiArash/Arshid-Aspire-ApiDocs-Extensions.git</RepositoryUrl>
@@ -30,16 +31,16 @@
 	<ItemGroup>
 		<None Include="..\ReadMeNuget.md" Pack="true" PackagePath="\" />
 	</ItemGroup>
-	
+
 	<ItemGroup>
-	  <None Include="..\icon.png">
-	    <Pack>True</Pack>
-	    <PackagePath>\</PackagePath>
-	  </None>
+		<None Include="..\icon.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Aspire.Hosting.AppHost" Version="9.4.0" />
+		<PackageReference Include="Aspire.Hosting.AppHost" Version="9.4.2" />
 	</ItemGroup>
 
 </Project>
