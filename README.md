@@ -56,7 +56,7 @@ var apiService = builder.AddProject<Projects.AspireApp1_ApiService>("apiservice"
 | **Average daily downloads** | ~10 |
 | **More stats** | [NuGet page](https://www.nuget.org/packages/Arshid.Aspire.ApiDocs.Extensions/) |
 
-<img width="898" height="344" alt="image" src="https://github.com/user-attachments/assets/5979fe86-2349-4290-ba4c-2490787d661c" />
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/2fbade96-8ada-4e91-b04f-53b6a81faa42" />
 
 </div>
 
