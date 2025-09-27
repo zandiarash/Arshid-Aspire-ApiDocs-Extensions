@@ -51,8 +51,8 @@ var apiService = builder.AddProject<Projects.AspireApp1_ApiService>("apiservice"
 | Metric | Value |
 |---|---|
 | **Package** | `Arshid.Aspire.ApiDocs.Extensions` |
-| **Latest version** | 9.4.2.1 |
-| **Total downloads** | ~2,100 |
+| **Latest version** | 9.5.0.1 |
+| **Total downloads** | ~2,400 |
 | **Average daily downloads** | ~10 |
 | **More stats** | [NuGet page](https://www.nuget.org/packages/Arshid.Aspire.ApiDocs.Extensions/) |
 
