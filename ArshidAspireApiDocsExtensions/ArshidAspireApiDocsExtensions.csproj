@@ -5,7 +5,7 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<PackageId>Arshid.Aspire.ApiDocs.Extensions</PackageId>
-		<Version>9.5.1.1</Version>
+		<Version>9.5.2.1</Version>
 		<Authors>Arash Zandi</Authors>
 		<Company>Arshid</Company>
 		<Description>An extension to add Swagger, OpenApi, Scalar, CustomUrl and CustomRoute to .Net
@@ -40,7 +40,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Aspire.Hosting.AppHost" Version="9.5.1" />
+		<PackageReference Include="Aspire.Hosting.AppHost" Version="9.5.2" />
 	</ItemGroup>
 
 </Project>
