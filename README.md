@@ -39,7 +39,29 @@ var apiService = builder.AddProject<Projects.AspireApp1_ApiService>("apiservice"
     .WithSwagger()
     .WithOpenApi()
     .WithCustomUrl("https://127.0.0.1:5000/CustomRoute/CustomPage1")
-    .WithRoute("/CustomRoute/CustomPage2"); //The URL become something like this {protocol}://{url}:{port}/CustomRoute/CustomPage2
+    .WithRoute("/CustomRoute/CustomPage2");
+```
+
+## 📚 API Reference
+
+| Method | Description | Parameters |
+|--------|-------------|------------|
+| `WithSwagger()` | Adds Swagger UI link | `IsHttps` (optional): Use HTTPS endpoint |
+| `WithScalar()` | Adds Scalar docs link | `IsHttps` (optional): Use HTTPS endpoint |
+| `WithOpenApi()` | Adds OpenAPI JSON link | `IsHttps` (optional): Use HTTPS endpoint |
+| `WithCustomUrl()` | Adds custom external URL | `CustomUrl`: Full URL to open |
+| `WithRoute()` | Adds custom route link | `CustomRoute`: Route path (e.g., `/health`) |
+
+### Using HTTPS
+```C#
+builder.AddProject<Projects.MyApi>("api")
+    .WithSwagger(IsHttps: true)
+    .WithScalar(IsHttps: true);
+```
+
+## 🧪 Running Tests
+```bash
+dotnet test
 ```
   
 ![Usage](https://github.com/user-attachments/assets/b289704b-3bb0-4cc2-ba4f-ccaafe5732f3)
@@ -64,5 +86,9 @@ var apiService = builder.AddProject<Projects.AspireApp1_ApiService>("apiservice"
 ### If you are not familiar with Swagger, Scalar, OpenApi and similar tools please read from this article :
 [net-9-revolutionizing-documentation-of-apis-from-swashbuckle-to-scalar](https://dev.to/arashzandi/net-9-revolutionizing-documentation-of-apis-from-swashbuckle-to-scalar-527)
 
-## 🤝 Contributing is welcome
-If you would like to contribute, please feel free to create a Pull Request.
+## ⚙️ Requirements
+- .NET 9.0+
+- .NET Aspire 9.x
+
+## 🤝 Contributing
+Contributions are welcome! Feel free to open a Pull Request.
