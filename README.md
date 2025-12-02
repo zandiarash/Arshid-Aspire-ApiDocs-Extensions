@@ -42,6 +42,8 @@ var apiService = builder.AddProject<Projects.AspireApp1_ApiService>("apiservice"
     .WithRoute("/CustomRoute/CustomPage2");
 ```
 
+![Usage](https://github.com/user-attachments/assets/b289704b-3bb0-4cc2-ba4f-ccaafe5732f3)
+
 ## 📚 API Reference
 
 | Method | Description | Parameters |
@@ -63,8 +65,6 @@ builder.AddProject<Projects.MyApi>("api")
 ```bash
 dotnet test
 ```
-  
-![Usage](https://github.com/user-attachments/assets/b289704b-3bb0-4cc2-ba4f-ccaafe5732f3)
 
 <div align="center">
 
