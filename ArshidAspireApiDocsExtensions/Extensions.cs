@@ -26,7 +26,7 @@ public static class Extensions
             executeCommand: context => OnLinkOpenerCommandAsync(builder, context, CustomRoute),
             commandOptions: new CommandOptions
             {
-                IconName = "Accessibility",
+                IconName = "Link",
                 IconVariant = IconVariant.Filled
             });
         return builder;
@@ -53,7 +53,7 @@ public static class Extensions
             executeCommand: context => OnLinkOpenerCommandAsync(builder, context, CustomUrl: CustomUrl),
             commandOptions: new CommandOptions
             {
-                IconName = "Accessibility",
+                IconName = "Globe",
                 IconVariant = IconVariant.Filled
             });
         return builder;
@@ -84,7 +84,7 @@ public static class Extensions
             executeCommand: context => OnLinkOpenerCommandAsync(builder, context, "/OpenApi/v1.json", IsHttps: IsHttps),
             commandOptions: new CommandOptions
             {
-                IconName = "Accessibility",
+                IconName = "Document",
                 IconVariant = IconVariant.Filled
             });
         return builder;
@@ -115,7 +115,7 @@ public static class Extensions
             executeCommand: context => OnLinkOpenerCommandAsync(builder, context, "/Scalar/v1", IsHttps: IsHttps),
             commandOptions: new CommandOptions
             {
-                IconName = "Accessibility",
+                IconName = "BookOpen",
                 IconVariant = IconVariant.Filled
             });
         return builder;
@@ -146,7 +146,7 @@ public static class Extensions
             executeCommand: context => OnLinkOpenerCommandAsync(builder, context, "/Swagger/index.html", IsHttps: IsHttps),
             commandOptions: new CommandOptions
             {
-                IconName = "Accessibility",
+                IconName = "Code",
                 IconVariant = IconVariant.Filled
             });
         return builder;
