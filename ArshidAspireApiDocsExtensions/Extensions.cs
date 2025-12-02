@@ -37,7 +37,7 @@ public static class Extensions
         builder.WithCommand(
             name: "OpenApi",
             displayName: "OpenApi",
-            executeCommand: context => OnLinkOpenerCommandAsync(builder, context, "/OpenApi/v1.json"),
+            executeCommand: context => OnLinkOpenerCommandAsync(builder, context, "/OpenApi/v1.json", IsHttps: IsHttps),
             commandOptions: new CommandOptions
             {
                 IconName = "Accessibility",
@@ -52,7 +52,7 @@ public static class Extensions
         builder.WithCommand(
             name: "Scalar",
             displayName: "Scalar",
-            executeCommand: context => OnLinkOpenerCommandAsync(builder, context, "/Scalar/v1"),
+            executeCommand: context => OnLinkOpenerCommandAsync(builder, context, "/Scalar/v1", IsHttps: IsHttps),
             commandOptions: new CommandOptions
             {
                 IconName = "Accessibility",
@@ -67,7 +67,7 @@ public static class Extensions
         builder.WithCommand(
             name: "Swagger",
             displayName: "Swagger",
-            executeCommand: context => OnLinkOpenerCommandAsync(builder, context, "/Swagger/index.html"),
+            executeCommand: context => OnLinkOpenerCommandAsync(builder, context, "/Swagger/index.html", IsHttps: IsHttps),
             commandOptions: new CommandOptions
             {
                 IconName = "Accessibility",
