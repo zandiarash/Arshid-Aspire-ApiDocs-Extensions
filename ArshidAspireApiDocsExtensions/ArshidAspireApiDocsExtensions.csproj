@@ -1,12 +1,12 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net9.0</TargetFramework>
+		<TargetFramework>net10.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<GenerateDocumentationFile>true</GenerateDocumentationFile>
 		<PackageId>Arshid.Aspire.ApiDocs.Extensions</PackageId>
-		<Version>9.5.2.1</Version>
+		<Version>13.0.1.1</Version>
 		<Authors>Arash Zandi</Authors>
 		<Company>Arshid</Company>
 		<Description>An extension to add Swagger, OpenApi, Scalar, CustomUrl and CustomRoute to .Net
@@ -41,7 +41,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Aspire.Hosting.AppHost" Version="9.5.2" />
+		<PackageReference Include="Aspire.Hosting.AppHost" Version="13.0.1" />
 	</ItemGroup>
 
 </Project>

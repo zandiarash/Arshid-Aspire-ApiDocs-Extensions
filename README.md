@@ -73,8 +73,8 @@ dotnet test
 | Metric | Value |
 |---|---|
 | **Package** | `Arshid.Aspire.ApiDocs.Extensions` |
-| **Latest version** | 9.5.2.1 |
-| **Total downloads** | ~3,200 |
+| **Latest version** | 13.0.1.1 |
+| **Total downloads** | ~3,5K |
 | **Average daily downloads** | ~12 |
 | **More stats** | [NuGet page](https://www.nuget.org/packages/Arshid.Aspire.ApiDocs.Extensions/) |
 
@@ -87,8 +87,9 @@ dotnet test
 [net-9-revolutionizing-documentation-of-apis-from-swashbuckle-to-scalar](https://dev.to/arashzandi/net-9-revolutionizing-documentation-of-apis-from-swashbuckle-to-scalar-527)
 
 ## ⚙️ Requirements
-- .NET 9.0+
-- .NET Aspire 9.x
+- .NET 10.0+
+- .NET Aspire 13.x
+If your project targets earlier versions, please consider using a previous release of this package.
 
 ## 🤝 Contributing
 Contributions are welcome! Feel free to open a Pull Request.
