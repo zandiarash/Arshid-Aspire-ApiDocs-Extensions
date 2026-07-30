@@ -1,0 +1,16 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/Test/">
+    <Project Path="Test/AspireAppTest.ApiService/AspireAppTest.ApiService.csproj" />
+    <Project Path="Test/AspireAppTest.AppHost/AspireAppTest.AppHost.csproj" />
+    <Project Path="Test/AspireAppTest.BlazorApp/AspireAppTest.BlazorApp.csproj" />
+    <Project Path="Test/AspireAppTest.ServiceDefaults/AspireAppTest.ServiceDefaults.csproj" />
+    <Project Path="Test/AspireAppTest.Tests/AspireAppTest.Tests.csproj" />
+  </Folder>
+  <Project Path="ArshidAspireApiDocsExtensions.Tests/ArshidAspireApiDocsExtensions.Tests.csproj" />
+  <Project Path="ArshidAspireApiDocsExtensions/ArshidAspireApiDocsExtensions.csproj" />
+</Solution>
