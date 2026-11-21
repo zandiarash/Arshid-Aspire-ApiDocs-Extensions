@@ -73,7 +73,7 @@ dotnet test
 | Metric | Value |
 |---|---|
 | **Package** | `Arshid.Aspire.ApiDocs.Extensions` |
-| **Latest version** | 13.4.6.1 |
+| **Latest version** | 13.6.5.1 |
 | **Total downloads** | ~5,6K |
 | **Average daily downloads** | ~10 |
 | **More stats** | [NuGet page](https://www.nuget.org/packages/Arshid.Aspire.ApiDocs.Extensions/) |
