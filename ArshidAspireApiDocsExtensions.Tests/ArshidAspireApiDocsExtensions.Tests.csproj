@@ -21,7 +21,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ArshidAspireApiDocsExtensions\ArshidAspireApiDocsExtensions.csproj" />
-    <ProjectReference Include="..\Test\AspireAppTest.AppHost\AspireAppTest.AppHost.csproj" />
+    <ProjectReference Include="..\Samples\AspireAppTest.AppHost\AspireAppTest.AppHost.csproj" />
   </ItemGroup>
 
   <ItemGroup>
