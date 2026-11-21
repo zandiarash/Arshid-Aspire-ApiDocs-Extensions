@@ -34,7 +34,7 @@ Then add these lines for the project that has Swagger, Scalar or etc.
 ```C#
 using Arshid.Aspire.ApiDocs.Extensions;
 
-var apiService = builder.AddProject<Projects.AspireApp1_ApiService>("apiservice")
+var apiService = builder.AddDotnetProject("apiservice", "../AspireApp1.ApiService/AspireApp1.ApiService.csproj")
     .WithScalar()
     .WithSwagger()
     .WithOpenApi()
@@ -56,7 +56,7 @@ var apiService = builder.AddProject<Projects.AspireApp1_ApiService>("apiservice"
 
 ### Using HTTPS
 ```C#
-builder.AddProject<Projects.MyApi>("api")
+builder.AddDotnetProject("api", "../MyApi/MyApi.csproj")
     .WithSwagger(IsHttps: true)
     .WithScalar(IsHttps: true);
 ```
@@ -73,9 +73,8 @@ dotnet test
 | Metric | Value |
 |---|---|
 | **Package** | `Arshid.Aspire.ApiDocs.Extensions` |
-| **Latest version** | 13.6.5.1 |
-| **Total downloads** | ~5,6K |
-| **Average daily downloads** | ~10 |
+| **Latest version** | 17.0.0.1 |
+| **Total downloads** | ~6,3K |
 | **More stats** | [NuGet page](https://www.nuget.org/packages/Arshid.Aspire.ApiDocs.Extensions/) |
 
 <img width="900" alt="image" src="https://github.com/user-attachments/assets/67385aec-da41-416a-863c-23aaa84633d3" />
@@ -88,7 +87,7 @@ dotnet test
 
 ## ⚙️ Requirements
 - .NET 10.0+ (for older .NET versions install other versions of this package)
-- .NET Aspire 13.x
+- Aspire 17.x (works with `AddDotnetProject`, and with the obsolete `AddProject` / `AddCSharpApp`, or any resource with endpoints)
 If your project targets earlier versions, please consider using a previous release of this package.
 
 ## 🤝 Contributing

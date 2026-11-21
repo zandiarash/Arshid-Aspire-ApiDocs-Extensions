@@ -2,12 +2,12 @@ using Arshid.Aspire.ApiDocs.Extensions;
 
 var builder = DistributedApplication.CreateBuilder(args);
 
-var ApiService = builder.AddProject<Projects.AspireAppTest_ApiService>("ApiService")
+var ApiService = builder.AddDotnetProject("ApiService", "../AspireAppTest.ApiService/AspireAppTest.ApiService.csproj")
     .WithScalar()
     .WithSwagger()
     .WithOpenApi();
 
-var BlazorApp = builder.AddProject<Projects.AspireAppTest_BlazorApp>("BlazorApp")
+var BlazorApp = builder.AddDotnetProject("BlazorApp", "../AspireAppTest.BlazorApp/AspireAppTest.BlazorApp.csproj")
     .WithCustomUrl("http://127.0.0.1:5001/CustomRoute/CustomPage1")
     .WithCustomUrl("http://127.0.0.1:5001/Counter")
     .WithRoute("/Counter") //The URL become something like this {protocol}://{url}:{port}/CustomRoute/.../CustomPage2

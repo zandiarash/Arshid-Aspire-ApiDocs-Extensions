@@ -8,17 +8,19 @@ public static class Extensions
     /// <summary>
     /// Adds a custom route link to the Aspire dashboard for the specified project.
     /// </summary>
+    /// <typeparam name="T">The resource type. Any resource with endpoints (e.g. <c>DotnetProjectResource</c>, <c>ProjectResource</c>).</typeparam>
     /// <param name="builder">The resource builder for the project.</param>
     /// <param name="CustomRoute">The custom route path (e.g., "/CustomRoute/Page1"). The URL will be constructed as {protocol}://{host}:{port}{CustomRoute}.</param>
     /// <returns>The resource builder for chaining.</returns>
     /// <example>
     /// <code>
-    /// builder.AddProject&lt;Projects.MyApi&gt;("api")
+    /// builder.AddDotnetProject("api", "../MyApi/MyApi.csproj")
     ///     .WithRoute("/health");
     /// </code>
     /// </example>
-    public static IResourceBuilder<ProjectResource> WithRoute(
-       this IResourceBuilder<ProjectResource> builder, string CustomRoute)
+    public static IResourceBuilder<T> WithRoute<T>(
+       this IResourceBuilder<T> builder, string CustomRoute)
+        where T : IResourceWithEndpoints
     {
         builder.WithCommand(
             name: CustomRoute,
@@ -35,17 +37,19 @@ public static class Extensions
     /// <summary>
     /// Adds a custom URL link to the Aspire dashboard for the specified project.
     /// </summary>
+    /// <typeparam name="T">The resource type. Any resource with endpoints (e.g. <c>DotnetProjectResource</c>, <c>ProjectResource</c>).</typeparam>
     /// <param name="builder">The resource builder for the project.</param>
     /// <param name="CustomUrl">The full custom URL to open (e.g., "https://example.com/docs").</param>
     /// <returns>The resource builder for chaining.</returns>
     /// <example>
     /// <code>
-    /// builder.AddProject&lt;Projects.MyApi&gt;("api")
+    /// builder.AddDotnetProject("api", "../MyApi/MyApi.csproj")
     ///     .WithCustomUrl("https://docs.myapi.com");
     /// </code>
     /// </example>
-    public static IResourceBuilder<ProjectResource> WithCustomUrl(
-        this IResourceBuilder<ProjectResource> builder, string CustomUrl)
+    public static IResourceBuilder<T> WithCustomUrl<T>(
+        this IResourceBuilder<T> builder, string CustomUrl)
+        where T : IResourceWithEndpoints
     {
         builder.WithCommand(
             name: "CustomUrl",
@@ -63,6 +67,7 @@ public static class Extensions
     /// <summary>
     /// Adds an OpenAPI JSON endpoint link to the Aspire dashboard.
     /// </summary>
+    /// <typeparam name="T">The resource type. Any resource with endpoints (e.g. <c>DotnetProjectResource</c>, <c>ProjectResource</c>).</typeparam>
     /// <param name="builder">The resource builder for the project.</param>
     /// <param name="IsHttps">If true, uses HTTPS protocol; otherwise uses HTTP. Default is false.</param>
     /// <returns>The resource builder for chaining.</returns>
@@ -71,12 +76,13 @@ public static class Extensions
     /// </remarks>
     /// <example>
     /// <code>
-    /// builder.AddProject&lt;Projects.MyApi&gt;("api")
+    /// builder.AddDotnetProject("api", "../MyApi/MyApi.csproj")
     ///     .WithOpenApi(IsHttps: true);
     /// </code>
     /// </example>
-    public static IResourceBuilder<ProjectResource> WithOpenApi(
-        this IResourceBuilder<ProjectResource> builder, bool IsHttps = false)
+    public static IResourceBuilder<T> WithOpenApi<T>(
+        this IResourceBuilder<T> builder, bool IsHttps = false)
+        where T : IResourceWithEndpoints
     {
         builder.WithCommand(
             name: "OpenApi",
@@ -93,6 +99,7 @@ public static class Extensions
     /// <summary>
     /// Adds a Scalar API documentation link to the Aspire dashboard.
     /// </summary>
+    /// <typeparam name="T">The resource type. Any resource with endpoints (e.g. <c>DotnetProjectResource</c>, <c>ProjectResource</c>).</typeparam>
     /// <param name="builder">The resource builder for the project.</param>
     /// <param name="IsHttps">If true, uses HTTPS protocol; otherwise uses HTTP. Default is false.</param>
     /// <returns>The resource builder for chaining.</returns>
@@ -102,12 +109,13 @@ public static class Extensions
     /// </remarks>
     /// <example>
     /// <code>
-    /// builder.AddProject&lt;Projects.MyApi&gt;("api")
+    /// builder.AddDotnetProject("api", "../MyApi/MyApi.csproj")
     ///     .WithScalar();
     /// </code>
     /// </example>
-    public static IResourceBuilder<ProjectResource> WithScalar(
-        this IResourceBuilder<ProjectResource> builder, bool IsHttps = false)
+    public static IResourceBuilder<T> WithScalar<T>(
+        this IResourceBuilder<T> builder, bool IsHttps = false)
+        where T : IResourceWithEndpoints
     {
         builder.WithCommand(
             name: "Scalar",
@@ -124,6 +132,7 @@ public static class Extensions
     /// <summary>
     /// Adds a Swagger UI link to the Aspire dashboard.
     /// </summary>
+    /// <typeparam name="T">The resource type. Any resource with endpoints (e.g. <c>DotnetProjectResource</c>, <c>ProjectResource</c>).</typeparam>
     /// <param name="builder">The resource builder for the project.</param>
     /// <param name="IsHttps">If true, uses HTTPS protocol; otherwise uses HTTP. Default is false.</param>
     /// <returns>The resource builder for chaining.</returns>
@@ -133,12 +142,13 @@ public static class Extensions
     /// </remarks>
     /// <example>
     /// <code>
-    /// builder.AddProject&lt;Projects.MyApi&gt;("api")
+    /// builder.AddDotnetProject("api", "../MyApi/MyApi.csproj")
     ///     .WithSwagger(IsHttps: true);
     /// </code>
     /// </example>
-    public static IResourceBuilder<ProjectResource> WithSwagger(
-        this IResourceBuilder<ProjectResource> builder, bool IsHttps = false)
+    public static IResourceBuilder<T> WithSwagger<T>(
+        this IResourceBuilder<T> builder, bool IsHttps = false)
+        where T : IResourceWithEndpoints
     {
         builder.WithCommand(
             name: "Swagger",
@@ -152,13 +162,14 @@ public static class Extensions
         return builder;
     }
 
-    private static Task<ExecuteCommandResult> OnLinkOpenerCommandAsync(
-        IResourceBuilder<ProjectResource> builder,
+    private static Task<ExecuteCommandResult> OnLinkOpenerCommandAsync<T>(
+        IResourceBuilder<T> builder,
         ExecuteCommandContext context,
         string? Route = null,
         string? CustomUrl = null,
         bool IsHttps = false
         )
+        where T : IResourceWithEndpoints
     {
         string? url;
         if (!string.IsNullOrEmpty(CustomUrl))
